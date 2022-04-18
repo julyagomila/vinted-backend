@@ -21,7 +21,7 @@ app.use(cors());
 app.use(formidableMiddleware());
 
 // ********** CONNEXION BDD ***********
-mongoose.connect("mongodb://localhost/vinted");
+mongoose.connect(process.env.DATA_BASE);
 
 // ********* IMPORT DES ROUTES *********
 const usersRoutes = require("./routes/users");
